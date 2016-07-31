@@ -1,0 +1,17 @@
+{
+  "name": "ng2-toastrs",
+  "version": "0.0.7",
+  "description": "",
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -d index.ts && sass ./toastr/toastr.component.scss ./toastr/toastr.component.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^3.8.0",
+    "tsc": "^1.20150623.0"
+  }
+}

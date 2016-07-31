@@ -1,0 +1,131 @@
+$success: rgba(76, 175, 80, 1);
+$warning: rgba(255, 255, 0, 1);
+$error: rgba(233, 30, 99, 1);
+$info: rgba(0, 188, 212, 1);
+
+.toastr-box{
+    height: 46px;
+    line-height: 46px;
+    box-shadow: 0 3px 5px rgb(200, 200, 200);
+    border-radius: 2px;
+    color: rgb(251, 251, 251);
+    padding-left: 10px;
+
+    span{
+        font-size: 16px;
+        min-width: 160px;
+        display: inline-block;
+        font-size: 14px;
+    }
+
+    .buttons-box{
+
+        float:right;
+        width: 80px;
+        height: 46px;
+        border-left: 1px solid rgb(251, 251, 251);
+
+        button{
+            width: 100%;
+            -webkit-appearance: none;
+            outline: none;
+            border: none;
+            background: transparent;
+            display: block;
+            color: rgb(251, 251, 251);
+            font-size: 12px;
+
+            &.confirm{
+                height: 24px;
+                &.noCancel{
+                    height: 46px;
+                }
+            }
+            &.cancel{
+                border-top: 1px solid rgb(251, 251, 251);
+                height: 22px;
+                &.noConfirm{
+                    height: 46px;
+                    border-top: none;
+                }
+            }
+        }
+    }
+
+    &:before{
+        display: inline;
+        border: 3px solid rgb(251, 251, 251);
+        border-radius: 50%;
+        padding: 2px 4px;
+        margin-right: 6px;
+    }
+
+    &.success{
+        background: $success;
+
+        &:before{
+            content: "\2713";
+        }
+    }
+
+    &.warning{
+        background: $warning;
+        color: rgb(80, 80, 80);
+
+        &:before{
+            content: "\21";
+            border-color: rgb(80, 80, 80);
+            padding: 2px 8px;
+        }
+
+        .buttons-box button{
+            color: rgb(80, 80, 80);
+        }
+    }
+
+    &.error{
+        background: $error;
+
+        &:before{
+            content: "\21";
+            padding: 2px 8px;
+        }
+    }
+
+    &.info{
+        background: $info;
+
+        &:before{
+            content: "\40";
+            border: none;
+            font-size: 18px;
+        }
+    }
+
+
+    //position
+    &.top-right{
+        position: fixed;
+        top: 2%;
+        right: 1%;
+    }
+
+    &.top-left{
+        position: fixed;
+        top: 2%;
+        left: 1%;
+    }
+
+    &.bottom-right{
+        position: fixed;
+        bottom: 5%;
+        right: 1%;
+    }
+
+    &.bottom-left{
+
+        position: fixed;
+        bottom: 5%;
+        left: 1%;
+    }
+}

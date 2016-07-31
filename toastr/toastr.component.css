@@ -1,0 +1,82 @@
+.toastr-box {
+  height: 46px;
+  line-height: 46px;
+  box-shadow: 0 3px 5px #c8c8c8;
+  border-radius: 2px;
+  color: #fbfbfb;
+  padding-left: 10px; }
+  .toastr-box span {
+    font-size: 16px;
+    min-width: 160px;
+    display: inline-block;
+    font-size: 14px; }
+  .toastr-box .buttons-box {
+    float: right;
+    width: 80px;
+    height: 46px;
+    border-left: 1px solid #fbfbfb; }
+    .toastr-box .buttons-box button {
+      width: 100%;
+      -webkit-appearance: none;
+      outline: none;
+      border: none;
+      background: transparent;
+      display: block;
+      color: #fbfbfb;
+      font-size: 12px; }
+      .toastr-box .buttons-box button.confirm {
+        height: 24px; }
+        .toastr-box .buttons-box button.confirm.noCancel {
+          height: 46px; }
+      .toastr-box .buttons-box button.cancel {
+        border-top: 1px solid #fbfbfb;
+        height: 22px; }
+        .toastr-box .buttons-box button.cancel.noConfirm {
+          height: 46px;
+          border-top: none; }
+  .toastr-box:before {
+    display: inline;
+    border: 3px solid #fbfbfb;
+    border-radius: 50%;
+    padding: 2px 4px;
+    margin-right: 6px; }
+  .toastr-box.success {
+    background: rgba(76, 175, 80, 0.6); }
+    .toastr-box.success:before {
+      content: "\2713"; }
+  .toastr-box.warning {
+    background: rgba(255, 255, 0, 0.6);
+    color: #505050; }
+    .toastr-box.warning:before {
+      content: "\21";
+      border-color: #505050;
+      padding: 2px 8px; }
+  .toastr-box.error {
+    background: rgba(233, 30, 99, 0.6); }
+    .toastr-box.error:before {
+      content: "\21";
+      padding: 2px 8px; }
+  .toastr-box.info {
+    background: rgba(0, 188, 212, 0.6); }
+    .toastr-box.info:before {
+      content: "\40";
+      border: none;
+      font-size: 18px; }
+  .toastr-box.top-right {
+    position: fixed;
+    top: 2%;
+    right: 1%; }
+  .toastr-box.top-left {
+    position: fixed;
+    top: 2%;
+    left: 1%; }
+  .toastr-box.bottom-right {
+    position: fixed;
+    bottom: 5%;
+    right: 1%; }
+  .toastr-box.bottom-left {
+    position: fixed;
+    bottom: 5%;
+    left: 1%; }
+
+/*# sourceMappingURL=toastr.component.css.map */
