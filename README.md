@@ -5,7 +5,8 @@ ng2-toastr 是基于angular2 RC.4所写的插件。
 它设计风格是基于Material Design。
 
 e.g:
-    ![no-button](https://thumbnail0.baidupcs.com/thumbnail/f81b4fc0cb759aec8fd020e31566c4c2?fid=3311408724-250528-398891356645613&time=1469970000&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-WgQ04WPp9GHQVd4bkxg1KBWUN%2bw%3d&expires=8h&chkbd=0&chkv=0&dp-logid=4937950726857469938&dp-callid=0&size=c1440_u900&quality=90)
+
+![no-button](https://thumbnail0.baidupcs.com/thumbnail/f81b4fc0cb759aec8fd020e31566c4c2?fid=3311408724-250528-398891356645613&time=1469970000&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-WgQ04WPp9GHQVd4bkxg1KBWUN%2bw%3d&expires=8h&chkbd=0&chkv=0&dp-logid=4937950726857469938&dp-callid=0&size=c1440_u900&quality=90)
 
 ## 环境
 现在只能使用在[ng2-webpack](https://github.com/AngularClass/angular2-webpack-starter "Title")的环境中。(我只测试了这个环境...)
