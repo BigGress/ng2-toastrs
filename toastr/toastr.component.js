@@ -16,6 +16,7 @@ var toastrComponent = (function () {
         this.animationName = "in";
         this.toastrs = [];
         this.getData = data || {};
+        console.log(this.getData);
         this.setDefaultaAnimate();
     }
     toastrComponent.prototype.ngAfterViewInit = function () {
@@ -64,8 +65,10 @@ var toastrComponent = (function () {
                 _this.getData.config.position.indexOf("left") > 0 ? "out-left" : "out-right";
         }, time);
         setTimeout(function () {
+            _this.getData["service"].toastrMessage.splice(_this.getData["service"].findToastrIndex(_this.getData), 1);
+            console.log(_this.getData["service"].toastrMessage);
             _this.removeToastr();
-        }, time + 1000);
+        }, time + 200);
     };
     //remove this dom
     toastrComponent.prototype.removeToastr = function () {
@@ -75,7 +78,7 @@ var toastrComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: "toastr",
-            template: " \n        <div class=\"toastr-box {{getData.config.position || 'top-right'}} {{getData.icon}}\" \n             @toastrAnimate='animationName'\n             [ngStyle]=\"{'transform':animationDirection}\">\n            <span>{{getData.message}}</span>\n            <div class=\"buttons-box\" *ngIf=\"getData.confirm || getData.cancel\">\n                <button class=\"confirm\"\n                        [ngClass]=\"{'noCancel':!getData.cancel}\"\n                        *ngIf=\"getData.confirm\"\n                        (click)=\"confirmEvent()\">\u786E\u8BA4</button>\n                <button class=\"cancel\"\n                        [ngClass]=\"{'noConfirm':!getData.confirm}\"\n                        *ngIf=\"getData.cancel\"\n                        (click)=\"cancelEvent()\">\u53D6\u6D88</button>\n            </div>\n        </div>\n    ",
+            template: " \n        <div class=\"toastr-box {{getData.config.position || 'top-right'}} {{getData.icon}}\" \n             @toastrAnimate='animationName'\n             [ngStyle]=\"{'transform':animationDirection,\n                         'top':(20 + 50 * getData.service.findToastrIndex(getData)) + 'px'}\">\n            <span>{{getData.message}}</span>\n            <div class=\"buttons-box\" *ngIf=\"getData.confirm || getData.cancel\">\n                <button class=\"confirm\"\n                        [ngClass]=\"{'noCancel':!getData.cancel}\"\n                        *ngIf=\"getData.confirm\"\n                        (click)=\"confirmEvent()\">\u786E\u8BA4</button>\n                <button class=\"cancel\"\n                        [ngClass]=\"{'noConfirm':!getData.confirm}\"\n                        *ngIf=\"getData.cancel\"\n                        (click)=\"cancelEvent()\">\u53D6\u6D88</button>\n            </div>\n        </div>\n    ",
             styleUrls: ["./toastr.component.css"],
             animations: [
                 core_1.trigger("toastrAnimate", [

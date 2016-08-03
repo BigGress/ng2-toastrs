@@ -41,34 +41,36 @@
     padding: 2px 4px;
     margin-right: 6px; }
   .toastr-box.success {
-    background: rgba(76, 175, 80, 0.6); }
+    background: #4caf50; }
     .toastr-box.success:before {
       content: "\2713"; }
   .toastr-box.warning {
-    background: rgba(255, 255, 0, 0.6);
+    background: yellow;
     color: #505050; }
     .toastr-box.warning:before {
       content: "\21";
       border-color: #505050;
       padding: 2px 8px; }
+    .toastr-box.warning .buttons-box button {
+      color: #505050; }
   .toastr-box.error {
-    background: rgba(233, 30, 99, 0.6); }
+    background: #e91e63; }
     .toastr-box.error:before {
       content: "\21";
       padding: 2px 8px; }
   .toastr-box.info {
-    background: rgba(0, 188, 212, 0.6); }
+    background: #00bcd4; }
     .toastr-box.info:before {
       content: "\40";
       border: none;
       font-size: 18px; }
   .toastr-box.top-right {
     position: fixed;
-    top: 2%;
+    top: 20px;
     right: 1%; }
   .toastr-box.top-left {
     position: fixed;
-    top: 2%;
+    top: 20px;
     left: 1%; }
   .toastr-box.bottom-right {
     position: fixed;

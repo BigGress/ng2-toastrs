@@ -22,6 +22,7 @@ import {ToastrConfig} from "./toastr.config";
 @Injectable()
 export class ToastrService{
     @ViewChild(toastrComponent) toastrEl;
+    toastrMessage:Object[] = [];
     toastrNumber:number = 0;
     thisToastrElm:ComponentRef<any>;
     config:any;
@@ -47,6 +48,7 @@ export class ToastrService{
             message:message,
             icon:icon,
             config:this.config,
+            service:this
         }
         Object.assign(provider,option)
 
@@ -62,8 +64,15 @@ export class ToastrService{
                 this.thisToastrElm = ref;
                 // this.thisToastrElm.push(ref);
                 ref.instance.getData.toastr = ref;
+
+                //push data
+                this.toastrMessage.push(provider)
                 // this.countBack();
             })
+    }
+
+    findToastrIndex(obj:Object){
+        return this.toastrMessage.indexOf(obj)
     }
 
     public success(message:string,option?:Object){

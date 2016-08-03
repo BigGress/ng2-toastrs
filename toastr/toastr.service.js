@@ -16,6 +16,7 @@ var ToastrService = (function () {
     function ToastrService(data, dcl, viewCR) {
         this.dcl = dcl;
         this.viewCR = viewCR;
+        this.toastrMessage = [];
         this.toastrNumber = 0;
         this.setDefaultConfig(data);
     }
@@ -34,7 +35,8 @@ var ToastrService = (function () {
         var provider = {
             message: message,
             icon: icon,
-            config: this.config
+            config: this.config,
+            service: this
         };
         Object.assign(provider, option);
         //get Root Dom;
@@ -48,8 +50,13 @@ var ToastrService = (function () {
             _this.thisToastrElm = ref;
             // this.thisToastrElm.push(ref);
             ref.instance.getData.toastr = ref;
+            //push data
+            _this.toastrMessage.push(provider);
             // this.countBack();
         });
+    };
+    ToastrService.prototype.findToastrIndex = function (obj) {
+        return this.toastrMessage.indexOf(obj);
     };
     ToastrService.prototype.success = function (message, option) {
         this.createElement("success", message, option);

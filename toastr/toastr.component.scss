@@ -10,6 +10,7 @@ $info: rgba(0, 188, 212, 1);
     border-radius: 2px;
     color: rgb(251, 251, 251);
     padding-left: 10px;
+    transition: all .2s;
 
     span{
         font-size: 16px;
@@ -106,13 +107,13 @@ $info: rgba(0, 188, 212, 1);
     //position
     &.top-right{
         position: fixed;
-        top: 2%;
+        top: 20px;
         right: 1%;
     }
 
     &.top-left{
         position: fixed;
-        top: 2%;
+        top: 20px;
         left: 1%;
     }
 

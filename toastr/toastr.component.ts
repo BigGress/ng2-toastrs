@@ -22,7 +22,8 @@ import {ToasOptions} from "./toastr.opetion";
     template:` 
         <div class="toastr-box {{getData.config.position || 'top-right'}} {{getData.icon}}" 
              @toastrAnimate='animationName'
-             [ngStyle]="{'transform':animationDirection}">
+             [ngStyle]="{'transform':animationDirection,
+                         'top':(20 + 50 * getData.service.findToastrIndex(getData)) + 'px'}">
             <span>{{getData.message}}</span>
             <div class="buttons-box" *ngIf="getData.confirm || getData.cancel">
                 <button class="confirm"
@@ -80,6 +81,8 @@ export class toastrComponent implements AfterViewInit{
     ){
         this.getData = data || {};
 
+        console.log(this.getData)
+
         this.setDefaultaAnimate();
     }
     
@@ -134,8 +137,14 @@ export class toastrComponent implements AfterViewInit{
         },time)
 
         setTimeout(()=>{
+            this.getData["service"].toastrMessage.splice(
+                this.getData["service"].findToastrIndex(this.getData),1
+            )
+
+            console.log(this.getData["service"].toastrMessage)
+
             this.removeToastr();
-        },time + 1000)
+        },time + 200)
     }
 
     //remove this dom
