@@ -6,7 +6,7 @@ ng2-toastr 是基于angular2 RC.4所写的插件。
 
 e.g:
 
-![no-button](/SmallGress/ng2-toastrs/blob/master/no-button.jpg?raw=true)
+![no-button](https://raw.githubusercontent.com/SmallGress/ng2-toastrs/master/no-button.jpg)
 
 ## 环境
 现在只能使用在[ng2-webpack](https://github.com/AngularClass/angular2-webpack-starter "Title")的环境中。(我只测试了这个环境...)
