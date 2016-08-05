@@ -8,6 +8,9 @@ e.g:
 
 ![no-button](https://raw.githubusercontent.com/SmallGress/ng2-toastrs/master/no-button.jpg)
 
+Docs & GitHub
+[GitHub](https://github.com/SmallGress/ng2-toastrs)
+
 ## 环境
 现在只能使用在[ng2-webpack](https://github.com/AngularClass/angular2-webpack-starter "Title")的环境中。(我只测试了这个环境...)
 
@@ -109,3 +112,5 @@ e.g:
 ## TODOs
 
 1.自定义按钮名字
+
+
